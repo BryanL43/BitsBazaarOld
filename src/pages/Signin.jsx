@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Signin = () => {
   return (
@@ -12,7 +13,7 @@ const Signin = () => {
                         <input id="passwordBar" type="password" placeholder="Password" autocomplete="off" required />
                         <button id="passwordVis" type="button" onclick="pwdVis()"><i id="visIcon" class="glyphicon glyphicon-eye-open"></i></button>
                     </div>
-                    <p>Forgot your password? <a href="">Click here</a></p>
+                    <p>Forgot your password? <Link to="">Click here</Link></p>
                     <button id="submitBtn" type="submit" onclick="">Sign In</button>
                     <p>Don't have a BitsBazaar account? <a href="/BitsBazaar/views/register.html">Create an account</a></p>
                 </form>
