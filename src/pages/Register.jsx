@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Signin = () => {
   return (
@@ -6,7 +7,7 @@ const Signin = () => {
         <div class="register-screen">
             <div class="register-container">
                 <h1>Create Your Account</h1>
-                <p id="alrHaveAccP">Already have an account? <a href="/signin">Sign In</a></p>
+                <p id="alrHaveAccP">Already have an account? <Link to="/signin">Sign In</Link></p>
                 <div class="nameBars-container">
                     <input id="firstNameBar" type="text" placeholder="First Name" autocomplete="off" required />
                     <input id="lastNameBar" type="text" placeholder="Last Name" autocomplete="off" required />

@@ -15,7 +15,7 @@ const Signin = () => {
                     </div>
                     <p>Forgot your password? <Link to="">Click here</Link></p>
                     <button id="submitBtn" type="submit" onclick="">Sign In</button>
-                    <p>Don't have a BitsBazaar account? <a href="/BitsBazaar/views/register.html">Create an account</a></p>
+                    <p>Don't have a BitsBazaar account? <Link to="register">Create an account</Link></p>
                 </form>
                 <p id="extra-signin-text">By continuing, you agree to BitBazaar's Conditions of Use and Privacy Notice.</p>
             </div>
