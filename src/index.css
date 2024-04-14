@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css?family=Inria%20Sans:700|Inria%20Sans:400');
+
+:root[data-theme="light"] {
+    --text: #111018;
+    --background: #fbfbfd;
+    --background-reverse: #222228;
+    --primary: #5043c5;
+    --secondary: #978eea;
+    --accent: #6758f1;
+    --accent-reverse: #1d0da5;
+    --search-icon: #978eea;
+}
+
+:root[data-theme="dark"] {
+    --text: #e8e7ef;
+    --background: #222228;
+    --background-reverse: #fbfbfd;;
+    --primary: #5043c5;
+    --secondary: #1e1570;
+    --accent: #1d0da5;
+    --accent-reverse: #6758f1;
+    --search-icon: #fbfbfd;
+}
+
+main {
+    background-color: var(--background);
+}
+
+/* Navbar */
+header {
+    position: -webkit-sticky;
+    background-color: var(--primary);
+	position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary);
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navBar > * {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#logo {
+    float: left;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.searchBar {
+    width: 25%;
+    height: 34px;
+    padding: 12px;
+    line-height: 1.42857143;
+    border: 1px solid;
+    border-radius: 5px;
+    outline: none;
+    background-color: var(--background);
+    border-color: var(--accent-reverse);
+    color: var(--text);
+    transition: ease-in-out border-color 300ms;
+    margin-left: auto;
+}
+
+.searchBar::placeholder {
+    font-size: 14px;
+    font-family: "Inria Sans";
+}
+
+.searchBar[type=text]:focus {
+    box-shadow: 0 0 5px var(--text);
+    border: 1px solid var(--text);
+    color: var(--text);
+}
+
+#searchIcon {
+    color: var(--search-icon);
+    font-size: 19px;
+    border: none;
+    margin-left: -37.5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#searchIcon:hover {
+    color: var(--primary);
+    transition: ease-in-out color 300ms;
+}
+
+#themeToggleBtn {
+    background-color: transparent;
+    color: var(--background-reverse);
+    font-size: 19px;
+    border: none;
+    margin-left: 7.5px;
+    margin-right: 10.5px;
+    width: 31px;
+    height: 29.14px;
+}
+
+#themeToggleBtn:hover {
+    color: var(--secondary);
+}
+
+#userBtn {
+    background-color: transparent;
+    color: #fbfbfd;
+    font-size: 19px;
+    border: none;
+}
+
+#userBtn:hover {
+    color: var(--secondary);
+}
+
+.userDropDown {
+    position: relative;
+    display: inline-block;
+    z-index: 1000;
+}
+
+.userDropDown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--background-reverse);
+    min-width: 200px;
+    right: 0;
+    margin-top: 12px;
+    margin-right: -10px;
+}
+
+.userDropDown-content a {
+    color: var(--background);
+    padding: 1px 16px;
+    display: block;
+}
+
+.userDropDown-content > a > h5 {
+    font-size: 14px;
+    font-family: "Inria Sans";
+}
+
+.userDropDown-content > a > p {
+    font-size: 12px;
+    font-family: "Inria Sans";
+}
+
+#dropDown-A {
+    text-decoration: none;
+}
+
+.userDropDown-content a:hover {
+    background-color: rgb(35,35,35);
+    color: var(--primary);
+}
+
+#userDropDownOpaque {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255, 0.05);
+    z-index: -1;
+}
+
+#cartBtn {
+    background-color: transparent;
+    color: #fbfbfd;
+    font-size: 19px;
+    border: none;
+}
+
+#cartBtn:hover {
+    color: var(--secondary);
+}
+
+.cartDropDown {
+    position: relative;
+    display: inline-block;
+    z-index: 1000;
+}
+
+.cartDropDown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--background-reverse);
+    min-width: 175px;
+    right: 0;
+    margin-top: 12px;
+    margin-right: -10px;
+}
+
+.cartDropDown-content a {
+    color: var(--background);
+    padding: 1px 16px;
+    display: block;
+}
+
+.cartDropDown-content > a > h5 {
+    font-size: 14px;
+    font-family: "Inria Sans";
+}
+
+.cartDropDown-content > a > p {
+    font-size: 12px;
+    font-family: "Inria Sans";
+}
+
+#dropDown-B {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#dropDown-B p {
+    display: flex;
+    align-items: center;
+}
+
+.subtotal-amount {
+    margin-left: auto;
+}
+
+.cartDropDown-content a:hover {
+    background-color: rgb(35,35,35);
+    color: var(--primary);
+}
+
+#cartDropDownOpaque {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255, 0.05);
+    z-index: -2;
+}
+
+/* Landing Page */
+
+/* Login Page & Register Page */
+.signin-screen, .register-screen {
+    background-color: var(--background);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-container, .register-container {
+    background-color: var(--secondary);
+    width: 500px;
+    min-height: 550px;
+    margin:  auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signin-container > h1, .register-container > h1 {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 48px;
+    color: var(--text);
+    font-family: "Inria Sans";
+    margin-top: 5%;
+}
+
+.signin-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2.5%;
+    margin-bottom: 10%;
+}
+
+#emailBar, #passwordBar {
+    height: 50px;
+    width: 80%;
+    margin: 15px auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 12px;
+    font-size: 16px;
+    font-family: "Inria Sans";
+    border: 1px solid;
+    border-radius: 5px;
+    outline: none;
+    background-color: var(--background);
+    border-color: var(--accent-reverse);
+    color: var(--text);
+    transition: ease-in-out border-color 300ms;
+    z-index: 1;
+}
+
+.nameBars-container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#firstNameBar, #lastNameBar {
+    height: 50px;
+    width: 47.5%;
+    padding: 12px;
+    font-size: 16px;
+    font-family: "Inria Sans";
+    border: 1px solid;
+    border-radius: 5px;
+    outline: none;
+    background-color: var(--background);
+    border-color: var(--accent-reverse);
+    color: var(--text);
+    transition: ease-in-out border-color 300ms;
+}
+
+#emailBar[type=email]:focus,
+#passwordBar[type=password]:focus {
+    box-shadow: 0 0 5px var(--text);
+    border: 1px solid var(--text);
+    color: var(--text);
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#passwordVis {
+    position: absolute;
+    font-size: 19px;
+    border: none;
+    background-color: transparent;
+    z-index: 2;
+    margin-left: 82.5%;
+    padding-top: 5px;
+    color: var(--search-icon);
+}
+
+#passwordVis:hover {
+    color: var(--primary);
+    transition: ease-in-out color 300ms;
+}
+
+.signin-form > p, .register-container > p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--text);
+    font-family: "Inria Sans";
+}
+
+#submitBtn {
+    height: 50px;
+    width: 80%;
+    background-color: var(--accent);
+    color: var(--text);
+    border-radius: .125rem;
+    border-color: var(--primary);
+    margin: 15px 0;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#submitBtn:hover {
+    background-color: var(--primary);
+}
+
+#extra-signin-text {
+    width: 80%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--text);
+    font-family: "Inria Sans";
+}
+
+#alrHaveAccP {
+    margin-bottom: 5%;
+}
+
+#registerNote {
+    color: var(--text);
+    font-family: "Inria Sans";
+    width: 80%;
+    font-size: 14px;
+}
+
+.progressBar {
+    height: 8px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 2%;
+}
+
+.redPWDStrength {
+    height: 100%;
+    width: 15%;
+    background-color: #f04124;
+    border: 1px solid grey;
+}
+
+.yellowPWDStrength {
+    height: 100%;
+    width: 15%;
+    background-color: #e99002;
+    border: 1px solid grey;
+}
+
+.greenPWDStrength {
+    height: 100%;
+    width: 15%;
+    background-color: #43ac6a;
+    border: 1px solid grey;
+}
+
+#pwdStatus {
+    color: var(--text);
+    font-family: "Inria Sans";
+    height: 8px;
+    margin-left: 10px;
+}
