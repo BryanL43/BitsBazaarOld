@@ -6,7 +6,7 @@ import '../components/style.css'
 const Signin = () => {
   return (
     <div>
-      <Navbar /> {/* Place the Navbar component here */}
+      <Navbar />
       <main>
         <div className="signin-screen">
             <div className="signin-container">
