@@ -24,7 +24,7 @@ const Signin = () => {
                       <i id="visIcon" className={`glyphicon glyphicon-eye-${pwdVis ? 'close' : 'open'}`}></i>
                       </button>
                   </div>
-                  <p>Forgot your password? <Link to="">Click here</Link></p>
+                  <p>Forgot your password? <Link to="/forgotpassword">Click here</Link></p>
                   <button id="submitBtn" type="submit">Sign In</button>
                   <p>Don't have a BitsBazaar account? <Link to="/register">Create an account</Link></p>
               </form>

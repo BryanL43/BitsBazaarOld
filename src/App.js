@@ -3,6 +3,7 @@ import {ThemeProvider} from './ThemeProvider';
 import Homepage from "./pages/Homepage";
 import Signin from "./pages/Signin";
 import Register from "./pages/Register";
+import Forgotpassword from "./pages/Forgotpassword";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
               <Route index element={<Homepage/>} />
               <Route path="signin" element={<Signin />} />
               <Route path="register" element={<Register />} />
+              <Route path="forgotpassword" element={<Forgotpassword />} />
             </Route>
           </Routes>
         </BrowserRouter>
