@@ -4,12 +4,15 @@ import { useTheme } from '../ThemeProvider';
 
 const Navbar = () => {
     const { toggleTheme } = useTheme();
+    
     return (
         <nav className="navBar">
             <Link to="/"><img src={require('./logo.png')} style={{ height: '34px' }} alt="BitBazaar Logo" /></Link>
             <input className="searchBar" type="text" placeholder="Search" autoComplete="off" />
             <Link id="searchIcon" to="/"><i className="glyphicon glyphicon-search"></i></Link>
-            <button id="themeToggleBtn" onClick={toggleTheme}><i className="glyphicon glyphicon-blackboard"></i></button>
+            <button id="themeToggleBtn" onClick={toggleTheme}>
+                <i className="glyphicon glyphicon-blackboard"></i>
+            </button>
             <div className="userDropDown">
                 <button id="userBtn"><i className="glyphicon glyphicon-user"></i></button>
                 <div className="userDropDown-content">
@@ -25,7 +28,9 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="cartDropDown">
-                <button id="cartBtn"><i className="glyphicon glyphicon-shopping-cart"></i></button>
+                <button id="cartBtn">
+                    <i className="glyphicon glyphicon-shopping-cart"></i>
+                </button>
                 <div className="cartDropDown-content">
                     <div id="cartDropDownOpaque"></div>
                     <Link id="dropDown-B" to="/">

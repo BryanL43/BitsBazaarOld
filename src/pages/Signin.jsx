@@ -21,7 +21,7 @@ const Signin = () => {
                   <div className="password-container">
                       <input id="passwordBar" type={pwdVis ? "text" : "password"} placeholder="Password" required />
                       <button id="passwordVis" type="button" onClick={togglePwdVis}>
-                      <i id="visIcon" className={`glyphicon glyphicon-eye-${pwdVis ? 'close' : 'open'}`}></i>
+                        <i id="visIcon" className={`glyphicon glyphicon-eye-${pwdVis ? 'close' : 'open'}`}></i>
                       </button>
                   </div>
                   <p>Forgot your password? <Link to="/forgotpassword">Click here</Link></p>
