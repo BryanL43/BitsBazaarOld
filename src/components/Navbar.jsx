@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { useTheme } from '../ThemeProvider';
 
 const Navbar = () => {
     const { toggleTheme } = useTheme();
+
+    //Handle Drop Down Buttons
+    const [isUserDropOpen, setIsUserDropOpen] = useState("none");
+    const [isCartDropOpen, setIsCartDropOpen] = useState("none");
+
+    const handleUserDropDown = () => {
+        setIsCartDropOpen("none");
+        setIsUserDropOpen(`${isUserDropOpen === "none" ? "block" : "none"}`);
+    }
+
+    const handleCartDropDown = () => {
+        setIsUserDropOpen("none");
+        setIsCartDropOpen(`${isCartDropOpen === "none" ? "block" : "none"}`);
+    }
     
     return (
         <nav className="navBar">
@@ -14,9 +28,11 @@ const Navbar = () => {
                 <i className="glyphicon glyphicon-blackboard"></i>
             </button>
             <div className="userDropDown">
-                <button id="userBtn"><i className="glyphicon glyphicon-user"></i></button>
-                <div className="userDropDown-content">
-                    <div id="userDropDownOpaque"></div>
+                <button id="userBtn" onClick={handleUserDropDown}>
+                    <i className="glyphicon glyphicon-user"></i>
+                </button>
+                <div className="userDropDown-content" style={{display: `${isUserDropOpen}`}}>
+                    <div id="userDropDownOpaque" onClick={handleUserDropDown}></div>
                     <Link id="dropDown-A" to="/register">
                         <h5>Create Account</h5>
                         <p>Place orders quickly and easily.</p>
@@ -28,11 +44,11 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="cartDropDown">
-                <button id="cartBtn">
+                <button id="cartBtn" onClick={handleCartDropDown}>
                     <i className="glyphicon glyphicon-shopping-cart"></i>
                 </button>
-                <div className="cartDropDown-content">
-                    <div id="cartDropDownOpaque"></div>
+                <div className="cartDropDown-content" style={{display: `${isCartDropOpen}`}}>
+                    <div id="cartDropDownOpaque" onClick={handleCartDropDown}></div>
                     <Link id="dropDown-B" to="/">
                         <h5>Your BitsBazaar Carts</h5>
                     </Link>
