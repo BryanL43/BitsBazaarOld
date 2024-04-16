@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage";
 import Signin from "./pages/Signin";
 import Register from "./pages/Register";
 import Forgotpassword from "./pages/Forgotpassword";
+import Notfoundpage from "./pages/Notfoundpage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
               <Route path="signin" element={<Signin />} />
               <Route path="register" element={<Register />} />
               <Route path="forgotpassword" element={<Forgotpassword />} />
+              <Route path="*" element={<Notfoundpage />} />
             </Route>
           </Routes>
         </BrowserRouter>
