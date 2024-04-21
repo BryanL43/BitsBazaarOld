@@ -23,7 +23,7 @@ const Signin = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name: email, email: email }), // Assuming email is used as both name and email for now
+        body: JSON.stringify({ name: "AAA", email: "AAA" }), // Assuming email is used as both name and email for now
       });
 
       if (response.ok) {
