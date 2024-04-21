@@ -499,3 +499,32 @@ header {
     color: var(--text);
     font-size: 16px;
 }
+
+/* Product Page */
+.product-screen {
+    display: flex;
+    justify-content: row;
+    background-color: grey;
+    height: 100vh;
+    width: 100%;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    background-color: white;
+
+}
+
+.image-carousel {
+    width: 10%;
+    height: 90%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}

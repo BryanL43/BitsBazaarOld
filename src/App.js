@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage";
 import Signin from "./pages/Signin";
 import Register from "./pages/Register";
 import Forgotpassword from "./pages/Forgotpassword";
+import Product from "./pages/Product";
 import Notfoundpage from "./pages/Notfoundpage";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
               <Route path="signin" element={<Signin />} />
               <Route path="register" element={<Register />} />
               <Route path="forgotpassword" element={<Forgotpassword />} />
+              <Route path="product" element={<Product />} />
               <Route path="*" element={<Notfoundpage />} />
             </Route>
           </Routes>
